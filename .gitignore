@@ -1,0 +1,11 @@
+# Python Cache
+__pycache__/
+*.pyc
+
+# Data Files (Do not push massive files to GitHub)
+prices.json
+*.db
+*.sqlite3
+
+# OS Files
+.DS_Store
