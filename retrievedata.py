@@ -1,5 +1,8 @@
 import sqlite3, requests, json,pprint
-connection = sqlite3.connect("CS2/CS2-Skins.db")
+from pathlib import Path
+
+DB_PATH = Path(__file__).parent / "CS2-Skins.db"
+connection = sqlite3.connect(DB_PATH)
 cursor = connection.cursor()
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS skins (

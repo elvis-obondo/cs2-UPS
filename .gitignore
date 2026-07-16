@@ -7,5 +7,8 @@ prices.json
 *.db
 *.sqlite3
 
+# Virtual environments
+.venv/
+
 # OS Files
 .DS_Store

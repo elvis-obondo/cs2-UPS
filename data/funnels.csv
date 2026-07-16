@@ -1,0 +1,116 @@
+target_name,target_min,target_max,collection,rarity,anchor_name
+M4A4 | Eye of Horus,0.0,0.7,collection-set-anubis,rarity_ancient_weapon,FAMAS | Waters of Nephthys
+M4A4 | Eye of Horus,0.0,0.7,collection-set-anubis,rarity_ancient_weapon,P250 | Apep's Curse
+Five-SeveN | Candy Apple,0.0,0.3,collection-set-assault,rarity_uncommon_weapon,SG 553 | Tornado
+Five-SeveN | Candy Apple,0.0,0.3,collection-set-assault,rarity_uncommon_weapon,UMP-45 | Caramel
+Tec-9 | Ossified,0.0,0.08,collection-set-aztec,rarity_rare_weapon,AK-47 | Jungle Spray
+Tec-9 | Ossified,0.0,0.08,collection-set-aztec,rarity_rare_weapon,M4A4 | Jungle Tiger
+AK-47 | Jet Set,0.0,1.0,collection-set-baggage,rarity_legendary_weapon,AK-47 | First Class
+AK-47 | Jet Set,0.0,1.0,collection-set-baggage,rarity_legendary_weapon,Desert Eagle | Pilot
+P250 | Franklin,0.0,0.4,collection-set-bank,rarity_legendary_weapon,AK-47 | Emerald Pinstripe
+AK-47 | Emerald Pinstripe,0.0,1.0,collection-set-bank,rarity_mythical_weapon,CZ75-Auto | Tuxedo
+AK-47 | Emerald Pinstripe,0.0,1.0,collection-set-bank,rarity_mythical_weapon,Desert Eagle | Meteorite
+AK-47 | Emerald Pinstripe,0.0,1.0,collection-set-bank,rarity_mythical_weapon,Galil AR | Tuxedo
+AWP | The Prince,0.0,0.6,collection-set-canals,rarity_ancient_weapon,MAG-7 | Cinquedea
+MAG-7 | Cinquedea,0.0,1.0,collection-set-canals,rarity_legendary_weapon,MAC-10 | Red Filigree
+MAG-7 | Cinquedea,0.0,1.0,collection-set-canals,rarity_legendary_weapon,MP9 | Stained Glass
+MAG-7 | Cinquedea,0.0,1.0,collection-set-canals,rarity_legendary_weapon,Nova | Baroque Orange
+AWP | Dragon Lore,0.0,0.7,collection-set-cobblestone,rarity_ancient_weapon,M4A1-S | Knight
+M4A1-S | Knight,0.0,0.1,collection-set-cobblestone,rarity_legendary_weapon,CZ75-Auto | Chalice
+M4A1-S | Knight,0.0,0.1,collection-set-cobblestone,rarity_legendary_weapon,Desert Eagle | Hand Cannon
+R8 Revolver | Amber Fade,0.0,0.4,collection-set-dust-2,rarity_legendary_weapon,P2000 | Amber Fade
+P2000 | Amber Fade,0.0,0.4,collection-set-dust-2,rarity_mythical_weapon,PP-Bizon | Brass
+P2000 | Amber Fade,0.0,0.4,collection-set-dust-2,rarity_mythical_weapon,M4A1-S | VariCamo
+P2000 | Amber Fade,0.0,0.4,collection-set-dust-2,rarity_mythical_weapon,SG 553 | Damascus Steel
+AK-47 | Gold Arabesque,0.0,0.7,collection-set-dust-2-2021,rarity_ancient_weapon,SSG 08 | Death Strike
+AK-47 | Gold Arabesque,0.0,0.7,collection-set-dust-2-2021,rarity_ancient_weapon,UMP-45 | Fade
+P90 | Death by Kitty,0.08,0.32,collection-set-esports,rarity_ancient_weapon,AK-47 | Red Laminate
+P90 | Death by Kitty,0.08,0.32,collection-set-esports,rarity_ancient_weapon,AWP | BOOM
+M4A4 | X-Ray,0.0,0.3,collection-set-esports-ii,rarity_ancient_weapon,AWP | Electric Hive
+M4A4 | X-Ray,0.0,0.3,collection-set-esports-ii,rarity_ancient_weapon,Desert Eagle | Cobalt Disruption
+M4A4 | X-Ray,0.0,0.3,collection-set-esports-ii,rarity_ancient_weapon,FAMAS | Afterimage
+AWP | Medusa,0.0,1.0,collection-set-gods-and-monsters,rarity_ancient_weapon,M4A4 | Poseidon
+M4A4 | Poseidon,0.0,0.33,collection-set-gods-and-monsters,rarity_legendary_weapon,G3SG1 | Chronos
+M4A4 | Poseidon,0.0,0.33,collection-set-gods-and-monsters,rarity_legendary_weapon,M4A1-S | Icarus Fell
+AWP | CMYK,0.0,0.8,collection-set-graphic-design,rarity_ancient_weapon,AUG | Lil' Pig
+AWP | CMYK,0.0,0.8,collection-set-graphic-design,rarity_ancient_weapon,Desert Eagle | Starcade
+AWP | Pit Viper,0.08,0.5,collection-set-italy,rarity_mythical_weapon,Glock-18 | Candy Apple
+AWP | Pit Viper,0.08,0.5,collection-set-italy,rarity_mythical_weapon,MP7 | Anodized Navy
+AWP | Pit Viper,0.08,0.5,collection-set-italy,rarity_mythical_weapon,Sawed-Off | Full Stop
+AUG | Akihabara Accept,0.0,1.0,collection-set-kimono,rarity_ancient_weapon,AK-47 | Hydroponic
+AK-47 | Hydroponic,0.0,0.8,collection-set-kimono,rarity_legendary_weapon,Desert Eagle | Sunset Storm 壱
+AK-47 | Hydroponic,0.0,0.8,collection-set-kimono,rarity_legendary_weapon,Desert Eagle | Sunset Storm 弐
+AK-47 | Hydroponic,0.0,0.8,collection-set-kimono,rarity_legendary_weapon,Five-SeveN | Neon Kimono
+AK-47 | Hydroponic,0.0,0.8,collection-set-kimono,rarity_legendary_weapon,M4A4 | Daybreak
+Dual Berettas | Cobalt Quartz,0.0,0.4,collection-set-lake,rarity_mythical_weapon,P90 | Teardown
+Dual Berettas | Cobalt Quartz,0.0,0.4,collection-set-lake,rarity_mythical_weapon,SG 553 | Anodized Navy
+Dual Berettas | Cobalt Quartz,0.0,0.4,collection-set-lake,rarity_mythical_weapon,USP-S | Night Ops
+SCAR-20 | Splash Jam,0.06,0.8,collection-set-militia,rarity_legendary_weapon,M4A4 | Modern Hunter
+M4A4 | Modern Hunter,0.06,0.8,collection-set-militia,rarity_mythical_weapon,PP-Bizon | Modern Hunter
+M4A4 | Modern Hunter,0.06,0.8,collection-set-militia,rarity_mythical_weapon,Nova | Blaze Orange
+M4A4 | Modern Hunter,0.06,0.8,collection-set-militia,rarity_mythical_weapon,Nova | Modern Hunter
+M4A4 | Modern Hunter,0.06,0.8,collection-set-militia,rarity_mythical_weapon,P250 | Modern Hunter
+M4A4 | Modern Hunter,0.06,0.8,collection-set-militia,rarity_mythical_weapon,XM1014 | Blaze Orange
+P2000 | Grassland Leaves,0.06,0.8,collection-set-militia,rarity_uncommon_weapon,PP-Bizon | Forest Leaves
+P2000 | Grassland Leaves,0.06,0.8,collection-set-militia,rarity_uncommon_weapon,MAC-10 | Tornado
+P2000 | Grassland Leaves,0.06,0.8,collection-set-militia,rarity_uncommon_weapon,XM1014 | Grassland
+MAG-7 | Bulldozer,0.06,0.8,collection-set-mirage,rarity_mythical_weapon,MAC-10 | Amber Fade
+MAG-7 | Bulldozer,0.06,0.8,collection-set-mirage,rarity_mythical_weapon,MP9 | Hot Rod
+MAG-7 | Bulldozer,0.06,0.8,collection-set-mirage,rarity_mythical_weapon,UMP-45 | Blaze
+AWP | Desert Hydra,0.0,0.6,collection-set-mirage-2021,rarity_ancient_weapon,Desert Eagle | Fennec Fox
+AWP | Desert Hydra,0.0,0.6,collection-set-mirage-2021,rarity_ancient_weapon,MP5-SD | Oxide Oasis
+AWP | Gungnir,0.0,0.6,collection-set-norse,rarity_ancient_weapon,Negev | Mjölnir
+Negev | Mjölnir,0.0,0.6,collection-set-norse,rarity_legendary_weapon,AUG | Flame Jörmungandr
+Negev | Mjölnir,0.0,0.6,collection-set-norse,rarity_legendary_weapon,Desert Eagle | Emerald Jörmungandr
+Negev | Mjölnir,0.0,0.6,collection-set-norse,rarity_legendary_weapon,P90 | Astral Jörmungandr
+M4A4 | Radiation Hazard,0.06,0.8,collection-set-nuke,rarity_rare_weapon,P90 | Fallout Warning
+M4A4 | Radiation Hazard,0.06,0.8,collection-set-nuke,rarity_rare_weapon,UMP-45 | Fallout Warning
+M4A4 | Radiation Hazard,0.06,0.8,collection-set-nuke,rarity_rare_weapon,XM1014 | Fallout Warning
+M4A1-S | Welcome to the Jungle,0.0,1.0,collection-set-op10-ancient,rarity_ancient_weapon,AK-47 | Panthera onca
+M4A1-S | Welcome to the Jungle,0.0,1.0,collection-set-op10-ancient,rarity_ancient_weapon,P90 | Run and Hide
+AWP | Fade,0.0,0.08,collection-set-op10-ct,rarity_ancient_weapon,M4A1-S | Blue Phosphor
+AWP | Fade,0.0,0.08,collection-set-op10-ct,rarity_ancient_weapon,USP-S | Target Acquired
+AK-47 | X-Ray,0.0,1.0,collection-set-op10-t,rarity_ancient_weapon,AWP | Silk Tiger
+AK-47 | X-Ray,0.0,1.0,collection-set-op10-t,rarity_ancient_weapon,MAC-10 | Hot Snakes
+M4A1-S | Master Piece,0.0,1.0,collection-set-overpass,rarity_legendary_weapon,AWP | Pink DDPAT
+M4A1-S | Master Piece,0.0,1.0,collection-set-overpass,rarity_legendary_weapon,USP-S | Road Rash
+AK-47 | B the Monster,0.0,0.8,collection-set-overpass-2024,rarity_ancient_weapon,AWP | Crakow!
+AK-47 | B the Monster,0.0,0.8,collection-set-overpass-2024,rarity_ancient_weapon,Zeus x27 | Dragon Snore
+M4A1-S | Fade,0.0,0.08,collection-set-realism-camo,rarity_ancient_weapon,Galil AR | Rainbow Spoon
+M4A1-S | Fade,0.0,0.08,collection-set-realism-camo,rarity_ancient_weapon,Glock-18 | AXIA
+M4A1-S | Nitro,0.06,0.8,collection-set-safehouse,rarity_mythical_weapon,FAMAS | Teardown
+M4A1-S | Nitro,0.06,0.8,collection-set-safehouse,rarity_mythical_weapon,Five-SeveN | Silver Quartz
+M4A1-S | Nitro,0.06,0.8,collection-set-safehouse,rarity_mythical_weapon,SSG 08 | Acid Fade
+AK-47 | Wild Lotus,0.0,1.0,collection-set-stmarc,rarity_ancient_weapon,MP9 | Wild Lily
+MP9 | Wild Lily,0.0,0.7,collection-set-stmarc,rarity_legendary_weapon,AUG | Midnight Lily
+MP9 | Wild Lily,0.0,0.7,collection-set-stmarc,rarity_legendary_weapon,Glock-18 | Synth Leaf
+MP9 | Wild Lily,0.0,0.7,collection-set-stmarc,rarity_legendary_weapon,SSG 08 | Sea Calico
+AWP | The End,0.0,1.0,collection-set-timed-drops-achroma,rarity_legendary_weapon,AK-47 | Breakthrough
+AWP | The End,0.0,1.0,collection-set-timed-drops-achroma,rarity_legendary_weapon,Glock-18 | Trace Lock
+M4A1-S | Stratosphere,0.0,0.8,collection-set-timed-drops-cool,rarity_legendary_weapon,AK-47 | Midnight Laminate
+M4A1-S | Stratosphere,0.0,0.8,collection-set-timed-drops-cool,rarity_legendary_weapon,USP-S | Royal Guard
+M4A1-S | Party Animal,0.0,0.6,collection-set-timed-drops-exuberant,rarity_legendary_weapon,AWP | Exothermic
+M4A1-S | Party Animal,0.0,0.6,collection-set-timed-drops-exuberant,rarity_legendary_weapon,USP-S | Sleeping Potion
+AWP | Green Energy,0.0,0.75,collection-set-timed-drops-neutral,rarity_legendary_weapon,Glock-18 | Glockingbird
+AWP | Green Energy,0.0,0.75,collection-set-timed-drops-neutral,rarity_legendary_weapon,M4A4 | Sheet Lightning
+AK-47 | Nouveau Rouge,0.0,1.0,collection-set-timed-drops-warm,rarity_legendary_weapon,Desert Eagle | Mulberry
+AK-47 | Nouveau Rouge,0.0,1.0,collection-set-timed-drops-warm,rarity_legendary_weapon,M4A1-S | Glitched Paint
+AK-47 | Nouveau Rouge,0.0,1.0,collection-set-timed-drops-warm,rarity_legendary_weapon,USP-S | Bleeding Edge
+Tec-9 | Red Quartz,0.0,0.4,collection-set-train,rarity_mythical_weapon,Desert Eagle | Urban Rubble
+Tec-9 | Red Quartz,0.0,0.4,collection-set-train,rarity_mythical_weapon,Sawed-Off | Amber Fade
+AWP | LongDog,0.0,1.0,collection-set-train-2025,rarity_ancient_weapon,M4A4 | Hellish
+AWP | LongDog,0.0,1.0,collection-set-train-2025,rarity_ancient_weapon,MP9 | Latte Rush
+Dual Berettas | Demolition,0.26,0.6,collection-set-vertigo,rarity_mythical_weapon,AK-47 | Black Laminate
+Dual Berettas | Demolition,0.26,0.6,collection-set-vertigo,rarity_mythical_weapon,P90 | Glacier Mesh
+PP-Bizon | Carbon Fiber,0.0,0.12,collection-set-vertigo,rarity_uncommon_weapon,MAC-10 | Urban DDPAT
+PP-Bizon | Carbon Fiber,0.0,0.12,collection-set-vertigo,rarity_uncommon_weapon,XM1014 | Urban Perforated
+M4A1-S | Imminent Danger,0.0,0.8,collection-set-vertigo-2021,rarity_ancient_weapon,Five-SeveN | Fall Hazard
+M4A1-S | Imminent Danger,0.0,0.8,collection-set-vertigo-2021,rarity_ancient_weapon,SG 553 | Hazard Pay
+AWP | Lightning Strike,0.0,0.08,collection-set-weapons-i,rarity_ancient_weapon,AK-47 | Case Hardened
+AWP | Lightning Strike,0.0,0.08,collection-set-weapons-i,rarity_ancient_weapon,Desert Eagle | Hypnotic
+SSG 08 | Blood in the Water,0.06,0.2,collection-set-weapons-ii,rarity_ancient_weapon,P90 | Cold Blooded
+SSG 08 | Blood in the Water,0.06,0.2,collection-set-weapons-ii,rarity_ancient_weapon,USP-S | Serum
+CZ75-Auto | Victoria,0.0,0.75,collection-set-weapons-iii,rarity_ancient_weapon,CZ75-Auto | The Fuschia Is Now
+CZ75-Auto | Victoria,0.0,0.75,collection-set-weapons-iii,rarity_ancient_weapon,P250 | Undertow
+AK-47 | Aphrodite,0.0,1.0,collection-set-xpshop-wpn-01,rarity_ancient_weapon,Desert Eagle | Heat Treated
+AK-47 | Aphrodite,0.0,1.0,collection-set-xpshop-wpn-01,rarity_ancient_weapon,M4A1-S | Solitude

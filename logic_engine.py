@@ -18,8 +18,8 @@ def calculate_tradeup(fillers:list[float], anchor:float,t_min:float,t_max:float)
         t_max (float): Preferably should have a very low ceiling
     """
     trade_up = fillers + [anchor]
-    output_float = (statistics.mean(trade_up) * t_max - t_min) + t_min
-    return output_float 
+    output_float = statistics.mean(trade_up) * (t_max - t_min) + t_min
+    return output_float
 
 
 def calculate_anchors():

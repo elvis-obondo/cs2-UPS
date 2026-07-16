@@ -1,12 +1,16 @@
 import json
 import pprint
+from pathlib import Path
+
 from logic_engine import calculate_anchors
 
 potential_anchors = calculate_anchors()
 
 FILLER_PRICE = 0.5
 
-with open("CS2/prices.json","r") as file:
+PRICES_PATH = Path(__file__).parent / "prices.json"
+
+with open(PRICES_PATH, "r") as file:
     raw_data = json.load(file)
     market_data = raw_data.get('items_list', {})
 
@@ -66,18 +70,36 @@ def get_expected_value(target_price:float,anchor_price:float):
 
 
 
-for anchor in potential_anchors:
-    max_anchor_float = anchor.get("Max Anchor Float")
-    anchor_names = anchor.get("Potential Anchors")
-    target_name = anchor.get("Target Skin")
-    for anchor_name in anchor_names:
-        anchor_price = get_price(anchor_name,max_anchor_float)
-        target_price = get_price(target_name, 0.06)
-        profit = get_expected_value(target_price,anchor_price)
-        condition = get_condition_value(max_anchor_float)
-        if anchor_price!=0:
-            if profit>0:
-                print(f"\n+++{anchor_name} of price: {anchor_price} will yield an expected value of ${round(profit,2)} each time you run it")
-            
-            
+def scan_opportunities():
+    """Scan all potential anchors and return positive-EV trade-ups as a DataFrame."""
+    import pandas as pd
 
+    rows = []
+    for anchor in potential_anchors:
+        max_anchor_float = anchor.get("Max Anchor Float")
+        anchor_names = anchor.get("Potential Anchors")
+        target_name = anchor.get("Target Skin")
+        for anchor_name in anchor_names:
+            anchor_price = get_price(anchor_name, max_anchor_float)
+            target_price = get_price(target_name, 0.06)
+            profit = get_expected_value(target_price, anchor_price)
+            condition = get_condition_value(max_anchor_float)
+            if anchor_price != 0 and profit > 0:
+                rows.append({
+                    "anchor_name": anchor_name,
+                    "anchor_price": anchor_price,
+                    "anchor_condition": condition,
+                    "target_name": target_name,
+                    "target_price": target_price,
+                    "expected_value": round(profit, 2),
+                })
+
+    return pd.DataFrame(rows)
+
+
+if __name__ == "__main__":
+    for _, row in scan_opportunities().iterrows():
+        print(
+            f"\n+++{row['anchor_name']} of price: {row['anchor_price']} "
+            f"will yield an expected value of ${row['expected_value']} each time you run it"
+        )

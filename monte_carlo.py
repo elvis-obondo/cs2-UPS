@@ -1,6 +1,33 @@
 import random
 import time
 
+import numpy as np
+
+
+def run_batch_simulation(
+    n_trials,
+    starting_bankroll,
+    cost_per_try,
+    win_payout,
+    win_chance,
+    total_attempts,
+    seed=None,
+):
+    """Vectorized batch of trade-up simulations.
+
+    Returns an (n_trials, total_attempts + 1) array of bankroll balances,
+    column 0 being the starting bankroll for every trial.
+    """
+    rng = np.random.default_rng(seed)
+    wins = rng.random((n_trials, total_attempts)) < win_chance
+    deltas = wins * win_payout - cost_per_try
+    cumulative = np.cumsum(deltas, axis=1)
+    history = starting_bankroll + np.concatenate(
+        [np.zeros((n_trials, 1)), cumulative], axis=1
+    )
+    return history
+
+
 def simulate_variance():
     # --- CONFIGURATION (The "SG 553 | Tornado" Scenario) ---
     STARTING_BANKROLL = 300.00  # Your total budget
@@ -46,7 +73,8 @@ def simulate_variance():
         print(f"Try #{i:02d} | {color_code}{result}{reset_color} | Balance: ${current_balance:.2f}")
         
         history.append(current_balance)
-        time.sleep(0.05) # Tiny pause for dramatic effect
+        time.sleep(0.05) # Tiny pause clear
+        
 
     # --- FINAL STATS ---
     net_profit = current_balance - STARTING_BANKROLL
