@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 
 from lib.data_access import load_last_refreshed, load_opportunities
+from lib.state import funnel_signature, get_selected_funnel
 from monte_carlo import run_batch_simulation
 
 # Mirrors market_scanner.py's cost/revenue assumptions. Not imported directly
@@ -32,6 +33,8 @@ underneath a funnel don't hold every time.
 )
 
 opportunities = load_opportunities()
+incoming = get_selected_funnel()
+sig = funnel_signature(incoming)
 
 st.subheader("Load a real opportunity")
 if opportunities.empty:
@@ -42,7 +45,32 @@ else:
         f"{row.anchor_name} → {row.target_name}  (EV ${row.expected_value:.2f})"
         for row in opportunities.itertuples()
     ]
-    choice = st.selectbox("Preload cost/payout from Opportunities", ["— manual —"] + labels)
+    options = ["— manual —"] + labels
+    default_index = 0
+    if incoming:
+        match_label = next(
+            (
+                label
+                for label, row in zip(labels, opportunities.itertuples())
+                if row.anchor_name == incoming["anchor_name"]
+                and row.target_name == incoming["target_name"]
+            ),
+            None,
+        )
+        if match_label:
+            default_index = options.index(match_label)
+    choice = st.selectbox(
+        "Preload cost/payout from Opportunities",
+        options,
+        index=default_index,
+        key=f"opp_choice_{sig}",
+    )
+
+if incoming and choice == "— manual —":
+    st.info(
+        f"Testing **{incoming['anchor_name']} → {incoming['target_name']}** from the Funnel "
+        "Explorer — it isn't in the priced Opportunities list, so enter cost/payout manually below."
+    )
 
 if choice == "— manual —":
     selected = None
