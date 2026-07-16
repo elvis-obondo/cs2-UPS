@@ -3,8 +3,16 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from lib.data_access import load_last_refreshed
+from lib.data_access import load_last_refreshed, load_opportunities
 from monte_carlo import run_batch_simulation
+
+# Mirrors market_scanner.py's cost/revenue assumptions. Not imported directly
+# because that module queries CS2-Skins.db and opens prices.json at import
+# time -- fine for the local offline refresh, not available in the deployed app.
+FILLER_PRICE = 0.5
+FILLER_COUNT = 9
+STEAM_TAX = 0.15
+DEFAULT_WIN_CHANCE_PCT = 10  # matches market_scanner's documented success-rate model
 
 st.set_page_config(page_title="Risk Simulator", page_icon="🎲", layout="wide")
 st.title("Risk Simulator")
@@ -23,17 +31,48 @@ underneath a funnel don't hold every time.
 """
 )
 
+opportunities = load_opportunities()
+
+st.subheader("Load a real opportunity")
+if opportunities.empty:
+    choice = "— manual —"
+    st.info("No priced opportunities available — configure the simulator manually below.")
+else:
+    labels = [
+        f"{row.anchor_name} → {row.target_name}  (EV ${row.expected_value:.2f})"
+        for row in opportunities.itertuples()
+    ]
+    choice = st.selectbox("Preload cost/payout from Opportunities", ["— manual —"] + labels)
+
+if choice == "— manual —":
+    selected = None
+    default_cost, default_payout = 7.50, 85.00
+else:
+    selected = opportunities.iloc[labels.index(choice)]
+    default_cost = round(float(selected.anchor_price) + FILLER_COUNT * FILLER_PRICE, 2)
+    default_payout = round(float(selected.target_price) * (1 - STEAM_TAX), 2)
+    st.caption(
+        f"Preloaded **{selected.anchor_name}** ({selected.anchor_condition}) → "
+        f"**{selected.target_name}**. Cost/attempt = anchor price (${selected.anchor_price:.2f}) "
+        f"+ {FILLER_COUNT} fillers at ${FILLER_PRICE:.2f}. Payout = target price "
+        f"(${selected.target_price:.2f}) less {STEAM_TAX:.0%} Steam Market tax."
+    )
+
 col1, col2, col3 = st.columns(3)
 with col1:
     starting_bankroll = st.number_input(
         "Starting bankroll ($)", min_value=0.0, value=300.0, step=10.0
     )
     cost_per_try = st.number_input(
-        "Cost per attempt ($)", min_value=0.01, value=7.50, step=0.50
+        "Cost per attempt ($)", min_value=0.01, value=default_cost, step=0.50, key=f"cost_{choice}"
     )
 with col2:
-    win_payout = st.number_input("Payout on a win ($)", min_value=0.0, value=85.0, step=1.0)
-    win_chance_pct = st.slider("Win chance (%)", min_value=0, max_value=100, value=10)
+    win_payout = st.number_input(
+        "Payout on a win ($)", min_value=0.0, value=default_payout, step=1.0, key=f"payout_{choice}"
+    )
+    win_chance_pct = st.slider(
+        "Win chance (%)", min_value=0, max_value=100, value=DEFAULT_WIN_CHANCE_PCT
+    )
 with col3:
     total_attempts = st.slider("Number of attempts", min_value=1, max_value=200, value=30)
     n_trials = st.select_slider(
