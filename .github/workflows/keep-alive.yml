@@ -1,0 +1,27 @@
+name: Keep Streamlit app awake
+
+on:
+  schedule:
+    # fires at 00:00 / 10:00 / 20:00 UTC -- every gap under the 12h sleep threshold
+    - cron: "0 */10 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    env:
+      APP_URL: https://elvis-counter-strike.streamlit.app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Visit app and wake it if asleep
+        run: python .github/scripts/wake_streamlit.py
